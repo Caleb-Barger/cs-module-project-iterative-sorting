@@ -2,8 +2,10 @@
 def selection_sort(arr):
     # loop through n-1 elements
     for i in range(0, len(arr) - 1):
+        # store a current boundry 
         cur_index = i
-        
+
+        # locate the
         smallest_value = arr[cur_index]
         smallest_index = cur_index
         # TO-DO: find next smallest element
