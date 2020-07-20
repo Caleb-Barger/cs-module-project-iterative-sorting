@@ -1,33 +1,39 @@
-# TO-DO: Complete the selection_sort() function below
 def selection_sort(arr):
     # loop through n-1 elements
     for i in range(0, len(arr) - 1):
         # store a current boundry 
         cur_index = i
 
-        # locate the
+        # set the smallest value & it's location
         smallest_value = arr[cur_index]
         smallest_index = cur_index
-        # TO-DO: find next smallest element
+
+        # iterate through the numbers that still need some sorting
         for unsorted_index in range(cur_index, len(arr)):
-        # (hint, can do in 3 loc)
-        # Your code here
+            
+            # if a smaller value is found
             if arr[unsorted_index] < smallest_index:
+
+                # update the smallest value & smallest index 
+                # to current unsorted index
                 smallest_value = arr[unsorted_index]
                 smallest_index = unsorted_index
-
-        # TO-DO: swap
-        # Your code here
+        
+        # swap the bigger value with the smaller one
         arr[cur_index], arr[smallest_index] = arr[smallest_index], arr[cur_index]
 
     return arr
 
-
-# TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
-    # Your code here
-
-
+    # iterate through each item 
+    for i in range(len(arr) - 1):
+        # for index that is not the last element (already sorted)
+        for j in range(0, len(arr)-i-1):
+            # if the current value is greator
+            if arr[j] > arr[j+1]:
+                # swap places
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+         
     return arr
 
 '''
